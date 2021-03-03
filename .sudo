@@ -1,0 +1,19 @@
+## fixes docker weirdness 
+# mkdir /sys/fs/cgroup/systemd
+# mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
+
+## Debian
+# udevadm trigger
+# apt-get update
+# apt-get -y dist-upgrade
+# apt-get -y autoremove
+# apt-get -y autoclean
+# apt-get -y clean
+
+# HI-PERF settings start
+## required for perf
+# sysctl -w kernel.perf_event_paranoid=-1
+## requires linux-cpupower
+# sudo apt-get install linux-cpupower
+# cpupower frequency-set --governor performance
+# HI-PERF settings end
