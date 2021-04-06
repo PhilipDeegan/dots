@@ -9,3 +9,5 @@ psa(){ ps aux | grep -v grep | grep $1; }
 youtube_mp3(){
   python3 -m youtube_dl --extract-audio --audio-format mp3 $1
 }
+
+shopt -s direxpand # expand $PWD/ on tab and don't add backslash!
