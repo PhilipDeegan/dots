@@ -11,3 +11,10 @@ youtube_mp3(){
 }
 
 shopt -s direxpand # expand $PWD/ on tab and don't add backslash!
+
+# minimize threads from blas/etc
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export VECLIB_MAXIMUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
