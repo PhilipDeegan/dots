@@ -1,4 +1,4 @@
-export MKN_DBG='gdb -batch -ex "run" -ex "bt" --args'
+export MKN_DBG="gdb -batch -ex run -ex bt --args"
 
 git config --global pull.rebase true
 
